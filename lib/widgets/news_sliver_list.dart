@@ -9,7 +9,8 @@ class NewsSliverList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<NewsCubit, NewsState>(builder: (context, state) {
+    return BlocBuilder<NewsCubit,NewsState>(
+      builder: (context, state) {
       if (state is SuccessState) {
         return SliverList.builder(
           itemBuilder: (BuildContext context, int index) {
